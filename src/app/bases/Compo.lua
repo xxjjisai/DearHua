@@ -4,7 +4,8 @@ local Compo = class("Compo", Entity)
 function Compo:ctor(tbParams) 
     Compo.super.ctor(self);
     self.tbParams = tbParams;
-    -- self:TransferParamsToActor();
+    self.iDisplayArea = self:GetActor().iDisplayArea;
+    self:TransferParamsToActor();
 end
 
 function Compo:GetActor()

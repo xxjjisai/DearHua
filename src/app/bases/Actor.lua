@@ -45,7 +45,7 @@ function Actor:AddiCompo(sClassName,tbParams)
     self.tbiCompoList = self.tbiCompoList or {};
     local iCompo = require(string.format( "app.compos.%s",sClassName )).new(tbParams);
     self.tbiCompoList[sClassName] = iCompo;
-    -- self:TransferParamsToActor();
+    self:TransferParamsToActor();
 end
 
 function Actor:GetiCompo(sClassName)

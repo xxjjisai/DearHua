@@ -4,7 +4,6 @@ local Animate = class("Animate", Compo)
 function Animate:ctor(tbParams) 
     Animate.super.ctor(self,tbParams);
     self.tbAnimte = {};
-    self.iDisplayArea = self:GetActor().iDisplayArea;
     self:DefineAnimate();
 end
 
@@ -13,11 +12,11 @@ function Animate:DefineAnimate()
     {
         nCurrentFrame = 0;
         bRunning = false;
-        nFrameCount = self.tbParams.nFrameCount;
-        sSpname = self.tbParams.sSpname;
-        sActionName = self.tbParams.sActionName;
-        bOnce = self.tbParams.bOnce;
-        nInterval = self.tbParams.nInterval;
+        nFrameCount = self.nFrameCount;
+        sSpname = self.sSpname;
+        sActionName = self.sActionName;
+        bOnce = self.bOnce;
+        nInterval = self.nInterval;
         fAdvanceFrame = function (defself)
             defself.nCurrentFrame = defself.nCurrentFrame + 1;
             if defself.nCurrentFrame >= defself.nFrameCount then 
@@ -27,11 +26,10 @@ function Animate:DefineAnimate()
             return true;
         end,
     }
-
-    if sActionName == nil then 
-        self.tbAnimte[sSpname] = def;
+    if self.sActionName == nil then 
+        self.tbAnimte[self.sSpname] = def;
     else
-        self.tbAnimte[sActionName] = def;
+        self.tbAnimte[self.sActionName] = def;
     end
 end
 
@@ -49,7 +47,7 @@ function Animate:setSpriteFrame(def,nIndex)
     end 
     local spriteFrameCache = cc.SpriteFrameCache:getInstance();
     local final = nil;
-    if def.name ~= nil then 
+    if def.sActionName ~= nil then 
         final = string.format("%s_%s%d.png",def.sSpname,def.sActionName,nIndex)
     else
         final = string.format("%s%d.png",def.sSpname,nIndex)
@@ -104,4 +102,4 @@ function Animate:Destory()
     self.iDisplayArea = nil;
 end 
 
-return Compo;
+return Animate;

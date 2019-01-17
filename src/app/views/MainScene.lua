@@ -8,10 +8,8 @@ function MainScene:onCreate()
     spriteFrameCache:addSpriteFrames("res/tex.plist")
 
     local iPlayer = ActorMgr:CreateActor("Player",nil,self)
-    print(table.show(iPlayer:GetiCompo("Animate"),"iPlayer:GetiCompo('Animate')"))
     iPlayer:GetiCompo("Animate"):SetFrame("run",0);
-    
-    -- iPlayer.Animate:Play("run");
+    iPlayer:GetiCompo("Animate"):Play("run");
     
     iPlayer.iDisplayArea:setPositionX(200)
     iPlayer.iDisplayArea:setPositionY(200)
