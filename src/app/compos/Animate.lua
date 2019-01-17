@@ -7,6 +7,14 @@ function Animate:ctor(tbParams)
     self:DefineAnimate();
 end
 
+function Animate:SetDefaultParams()
+    self.sActionName = "run";
+    self.sSpname = "tank_green";
+    self.nFrameCount = 8;
+    self.nInterval = 0.05;
+    self.bOnce = false;
+end
+
 function Animate:DefineAnimate()
     local def = 
     {

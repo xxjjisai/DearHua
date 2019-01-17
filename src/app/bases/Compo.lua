@@ -3,9 +3,14 @@ local Compo = class("Compo", Entity)
 
 function Compo:ctor(tbParams) 
     Compo.super.ctor(self);
+    self:SetDefaultParams();
     self.tbParams = tbParams;
     self.iDisplayArea = self:GetActor().iDisplayArea;
     self:TransferParamsToActor();
+end
+
+function Compo:SetDefaultParams()
+    
 end
 
 function Compo:GetActor()
