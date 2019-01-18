@@ -10,7 +10,7 @@ function Compo:ctor(tbParams)
 end
 
 function Compo:SetDefaultParams()
-    
+    Tools:Trace(self,1,"method SetDefaultParams must be implemented!~")
 end
 
 function Compo:GetActor()

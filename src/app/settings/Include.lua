@@ -12,6 +12,6 @@ require "app.libs.Utils"
 require "app.configs.ResConfig"
 
 -- 全局管理器
-require "app.mgrs.ActorMgr" -- 参演者管理器
-require "app.mgrs.OriginMgr" -- 唯一ID管理器
-require "app.mgrs.ResMgr" -- 资源加载类
+-- local ActorMgr = require "app.mgrs.ActorMgr" -- 参演者管理器
+-- local OriginMgr = require "app.mgrs.OriginMgr" -- 唯一ID管理器
+-- local ResMgr = require "app.mgrs.ResMgr" -- 资源加载类

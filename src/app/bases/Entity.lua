@@ -8,7 +8,7 @@ function Entity:ctor()
 end
 
 function Entity:SetUniqueID()
-    self.nUniqueID = OriginMgr:SetUniqueID();
+    self.nUniqueID = self.nUniqueID + 1;
 end
 
 function Entity:GetUniqueID()

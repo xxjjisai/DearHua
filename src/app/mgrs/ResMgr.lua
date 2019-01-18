@@ -1,4 +1,9 @@
-_G.ResMgr = {}
+local Manager = require("app.bases.Manager")
+local ResMgr = class("ResMgr", Manager)
+
+function ResMgr:ctor() 
+    ResMgr.super.ctor(self);
+end
 
 function ResMgr:StartLoadRes(node,pfn)
     -- self.loadingBar = cc.LoadingBar:create("HelloWorld.png");
@@ -52,3 +57,5 @@ function ResMgr:loadResCallBack(texture2d)
         end 
     end 
 end
+
+return ResMgr;
