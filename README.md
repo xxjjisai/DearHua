@@ -20,7 +20,7 @@ REM :: git commit -m "add a line"
 REM :: git pull origin master  
   
 REM :: vscode 提交：  
-REM :: 点击文件右边"+"号,点击左上角"..."选择 Commit Stage ,填写log, 再次点击左上角"..."选择 Push to
+REM :: 点击文件右边"+"号,点击左上角"..."选择 Commit Stage ,填写log, 再次点击左上角"..."选择 Push to  
 REM :: 如果可能有冲突先点击左上角"..."选择 Pull 更新同步代码  
   
 REM :: 如果提交不上去就执行下面的命令  
